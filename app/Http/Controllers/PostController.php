@@ -15,7 +15,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        return view('post');
     }
 
     /**
@@ -37,7 +37,7 @@ class PostController extends Controller
     public function store(PostRequest $request)
     {
        Post::create($request->all());
-       return back()->with("success", "SUCESSO VERDE!!!");
+       return redirect()->back()->with('message', 'zzz');
     }
 
     /**
